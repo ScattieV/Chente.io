@@ -1,0 +1,114 @@
+{
+  "name": "Appointment Booking Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "appointment",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-node",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "calendar": "primary",
+        "operation": "create",
+        "summary": "={{ $json.name }} - Tattoo Appointment",
+        "description": "={{ $json.message }}",
+        "start": "={{ $json.preferredDate + 'T' + $json.preferredTime + ':00' }}",
+        "end": "={{ new Date(new Date($json.preferredDate + 'T' + $json.preferredTime + ':00').getTime() + 60*60*1000).toISOString() }}",
+        "attendees": [
+          {
+            "email": "={{ $json.email }}"
+          },
+          {
+            "email": "scattie.evargas@gmail.com"
+          }
+        ]
+      },
+      "id": "google-calendar-node",
+      "name": "Google Calendar",
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1,
+      "position": [460, 300],
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "your-google-calendar-credential-id",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Appointment Confirmation - Daniel Valhalus",
+        "text": "Hi {{ $json.name }},\n\nYour appointment is scheduled for {{ $json.preferredDate }} at {{ $json.preferredTime }}.\n\nDetails: {{ $json.message }}\n\nStyle: {{ $json.style }}\n\nSee you soon!\n\nDaniel Valhalus"
+      },
+      "id": "email-client",
+      "name": "Email to Client",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [680, 200],
+      "credentials": {
+        "smtp": {
+          "id": "your-smtp-credential-id",
+          "name": "SMTP"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "to": "scattie.evargas@gmail.com",
+        "subject": "New Appointment Request",
+        "text": "New appointment:\n\nName: {{ $json.name }}\nEmail: {{ $json.email }}\nDate: {{ $json.preferredDate }}\nTime: {{ $json.preferredTime }}\nStyle: {{ $json.style }}\nMessage: {{ $json.message }}"
+      },
+      "id": "email-artist",
+      "name": "Email to Artist",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [680, 400],
+      "credentials": {
+        "smtp": {
+          "id": "your-smtp-credential-id",
+          "name": "SMTP"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Calendar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Calendar": {
+      "main": [
+        [
+          {
+            "node": "Email to Client",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Email to Artist",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {},
+  "staticData": null
+}

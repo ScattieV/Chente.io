@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Valhalus — Tattoo Artist</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="#hero"><img src="images/gallery/Logo%20para%20usar.png" alt="Valhalus logo" /></a>
+      <ul class="nav-links">
+        <li><a href="#about">About me</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#styles">Styles</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <select id="lang-toggle" class="lang-btn">
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+        <option value="fr">FR</option>
+      </select>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-sub">Tattoo Artist</p>
+      <h1 class="hero-title">Daniel<br /><span>Valhalus</span></h1>
+      <p class="hero-desc">Permanent art. Unique designs that tell your story.</p>
+      <a href="#contact" class="btn-primary">Book your appointment</a>
+    </div>
+    <div class="hero-scroll">
+      <span></span>
+      <p>Scroll</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-img-wrap">
+        <!-- Artist photo -->
+        <div class="about-img-placeholder">
+          <img src="images/gallery/Artista, Tatuado.JPG" alt="Artista Tatuado" onerror="this.parentElement.classList.add('no-img')" />
+          <div class="placeholder-text"></div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="section-tag">About me</p>
+        <h2>The Art on the Skin</h2>
+        <p>I am Daniel Valhalus, a passionate tattoo artist with years of experience creating designs that go beyond ink. Each tattoo is a conversation between your story and my art.</p>
+        <p>Specialized in detailed styles with a focus on composition, shading and visual narrative. Each piece is unique, thought and executed to last a lifetime.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num" data-target="500">0</span><span>+</span>
+            <p>Tattoos done</p>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="8">0</span><span>+</span>
+            <p>Years of experience</p>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="100">0</span><span>%</span>
+            <p>Satisfied clients</p>
+          </div>
+        </div>
+        <a href="https://www.instagram.com/danielvalhalustattoos" target="_blank" class="btn-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          View Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <p class="section-tag center">Portfolio</p>
+      <h2 class="center">Recent Work</h2>
+      <p class="section-desc center">A selection of the most outstanding designs. Each piece is unique and unrepeatable.</p>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="neotradicional">Neo-traditional</button>
+        <button class="filter-btn" data-filter="realismo">Realism</button>
+        <button class="filter-btn" data-filter="blackgrey">Black and Grey</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Gallery items -->
+
+        <div class="gallery-item featured" data-category="blackgrey">
+          <img src="images/gallery/IMG_20230425_191509_924.jpg" alt="Tattoo 1" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>View</span></div>
+          <div class="gallery-placeholder">IMG_20230425_191509_924<br/><small>black and grey</small></div>
+        </div>
+
+        <div class="gallery-item" data-category="realismo">
+          <img src="images/gallery/IMG_20240220_203053_984.jpg" alt="Tattoo 2" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>View</span></div>
+          <div class="gallery-placeholder">IMG_20240220_203053_984<br/><small>realism</small></div>
+        </div>
+
+        <div class="gallery-item" data-category="neotradicional">
+          <img src="images/gallery/IMG-20230705-WA0003.jpg" alt="Tattoo 3" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>View</span></div>
+          <div class="gallery-placeholder">IMG-20230705-WA0003<br/><small>neo-traditional</small></div>
+        </div>
+
+        <div class="gallery-item" data-category="blackgrey">
+          <img src="images/gallery/20240715_160853 (1).jpg" alt="Tattoo 4" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>View</span></div>
+          <div class="gallery-placeholder">20240715_160853<br/><small>black and grey</small></div>
+        </div>
+
+        <div class="gallery-item featured" data-category="realismo">
+          <img src="images/gallery/20250306_202149 (1) (1).jpg" alt="Tattoo 5" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>View</span></div>
+          <div class="gallery-placeholder">20250306_202149<br/><small>realism</small></div>
+        </div>
+
+        <div class="gallery-item" data-category="neotradicional">
+          <img src="images/gallery/IMG_2298.jpg" alt="Tattoo 6" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>View</span></div>
+          <div class="gallery-placeholder">IMG_2298<br/><small>neo-traditional</small></div>
+        </div>
+
+        <div class="gallery-item" data-category="blackgrey">
+          <img src="images/gallery/IMG_4420.jpg" alt="Tattoo 7" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>View</span></div>
+          <div class="gallery-placeholder">IMG_4420<br/><small>black and grey</small></div>
+        </div>
+
+        <div class="gallery-item" data-category="realismo">
+          <img src="images/gallery/IMG_4431.jpg" alt="Tattoo 8" onerror="this.src=''" />
+          <div class="gallery-overlay"><span>View</span></div>
+          <div class="gallery-placeholder">IMG_4431<br/><small>realism</small></div>
+        </div>
+      </div>
+
+      <div class="gallery-more">
+        <a href="https://www.instagram.com/danielvalhalustattoos" target="_blank" class="btn-outline">See more on Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev">&#8249;</button>
+    <div class="lightbox-img-wrap">
+      <img src="" alt="" id="lightboxImg" />
+    </div>
+    <button class="lightbox-next" id="lightboxNext">&#8250;</button>
+  </div>
+
+  <!-- STYLES -->
+  <section id="styles">
+    <div class="container">
+      <p class="section-tag center">Specialties</p>
+      <h2 class="center">Tattoo Styles</h2>
+      <div class="styles-grid">
+        <div class="style-card">
+          <div class="style-icon">◈</div>
+          <h3>Realism</h3>
+          <p>Portraits and scenes with photographic depth. Detail and texture as protagonists.</p>
+        </div>
+        <div class="style-card">
+          <div class="style-icon">◉</div>
+          <h3>Neo-traditional</h3>
+          <p>Modern take on classic tattooing. Bold lines, vibrant colors and contemporary symbolism.</p>
+        </div>
+        <div class="style-card">
+          <div class="style-icon">◆</div>
+          <h3>Black and Grey</h3>
+          <p>Shades of grey with black outlines. Subtle gradients and depth without color.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container contact-grid">
+      <div class="contact-text">
+        <p class="section-tag">Book Appointment</p>
+        <h2>Ready for your<br/>next tattoo?</h2>
+        <p>Fill out the form below to schedule a consultation. Each design begins with a conversation.</p>
+        <div class="contact-links">
+          <a href="https://www.instagram.com/danielvalhalustattoos" target="_blank" class="contact-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            @danielvalhalustattoos
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email or WhatsApp</label>
+          <input type="text" id="email" name="email" placeholder="Your contact" required />
+        </div>
+        <div class="form-group">
+          <label for="style">Style of interest</label>
+          <select id="style" name="style">
+            <option value="">Select a style</option>
+            <option value="blackwork">Blackwork</option>
+            <option value="realismo">Realism</option>
+            <option value="geometrico">Geometric</option>
+            <option value="tradicional">Traditional</option>
+            <option value="otro">Other / Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="preferredDate">Preferred Date</label>
+          <input type="date" id="preferredDate" name="preferredDate" required />
+        </div>
+        <div class="form-group">
+          <label for="preferredTime">Preferred Time</label>
+          <input type="time" id="preferredTime" name="preferredTime" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Tell me your idea</label>
+          <textarea id="message" name="message" rows="5" placeholder="Describe your idea, body area, approximate size..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary full">Send Request</button>
+        <p class="form-note">* This will send your appointment request. You'll receive a confirmation email.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <p class="footer-logo">VALHALUS</p>
+      <p class="footer-copy">&copy; 2026 Daniel Valhalus Tattoos. All rights reserved.</p>
+      <a href="https://www.instagram.com/danielvalhalustattoos" target="_blank" class="footer-ig">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<div class="floating-btn">
+  <a href="#contact">Book Appointment</a>
+</div>
